@@ -7,25 +7,57 @@
 
 // Exercício 1 — classificarIdade
 export function classificarIdade(idade) {
-  // escreva seu código aqui
+  if(idade>=18){
+    return "adulto";
+  }
+  else if(idade >=12){
+    return "adolescente"; 
+  }
+  else{
+    return "criança";
+  }
 }
 
 // Exercício 2 — calcularDesconto
 export function calcularDesconto(preco, percentual) {
-  // escreva seu código aqui
+  let valor = preco;
+  let per = 100 - percentual; 
+  valor =  valor *(per/100);
+  return valor;
 }
 
 // Exercício 3 — verificarAprovacao
 export function verificarAprovacao(nota) {
-  // escreva seu código aqui
+  if(nota>=60){
+    return "aprovado";
+  }
+  else if(nota <40){
+    return "reprovado"; 
+  }
+  else{
+    return "recuperação";
+  }
 }
 
 // Exercício 4 — somarPares
 export function somarPares(numeros) {
-  // escreva seu código aqui
+  let soma =0;
+  for(let numero of numeros){
+    if ( numero %2 === 0 ){
+      soma +=numero;
+    }
+  }
+ console.log(soma);
+ return soma;
 }
 
 // Exercício 5 — contarLetra
 export function contarLetra(texto, letra) {
-  // escreva seu código aqui
+  let contar =0;
+  for(let letr of texto){
+    if(letr === letra){
+    contar+=1; 
+    }
+  }
+  return contar;
 }
